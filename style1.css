@@ -1,0 +1,156 @@
+
+  :root {
+    --bg-color: #0d1117;
+    --container-bg: #161b22;
+    --text-color: #e6edf3;
+    --input-bg: #21262d;
+    --border-color: #30363d;
+    --primary-color: #58a6ff;
+    --btn-gradient: linear-gradient(to right, #3b82f6, #1f6feb);
+    --btn-hover: linear-gradient(to right, #60a5fa, #3b82f6);
+    --neumorphic-shadow: 6px 6px 12px #0b0e13, -6px -6px 12px #1a1f27;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 420px;
+    background: var(--container-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--neumorphic-shadow);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+  }
+
+  .container:hover {
+    transform: scale(1.01);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+    position: relative;
+  }
+
+  .form-group:focus-within label {
+    color: var(--primary-color);
+  }
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+    color: #c9d1d9;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: 0.3s ease;
+  }
+
+  input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+
+  .forgot-password {
+    text-align: right;
+    margin-bottom: 1rem;
+  }
+
+  .forgot-password a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--btn-gradient);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.4s ease, transform 0.2s ease;
+  }
+
+  .btn:hover {
+    background: var(--btn-hover);
+    transform: translateY(-2px);
+  }
+
+  .google-btn {
+    margin-top: 15px;
+    background: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    backdrop-filter: blur(4px);
+  }
+
+  .google-btn:hover {
+    background: #2a303c;
+    transform: translateY(-2px);
+  }
+
+  .google-btn img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .toggle-link {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 0.95rem;
+  }
+
+  .toggle-link:hover {
+    text-decoration: underline;
+  }
+
+  .hidden {
+    display: none;
+  }
+
